@@ -1,0 +1,84 @@
+2023/11/25 05:13:29 main.go:14: test
+2023/11/25 08:14:43 users.go:28: insert into users(
+		uuid,
+		name,
+		email,
+		password,
+		created_at
+	) values(
+		:1,:2,:3,:4,:5
+	)
+2023/11/25 08:16:05 users.go:25: insert into users(
+		uuid,
+		name,
+		email,
+		password,
+		created_at
+	) values( ?,?,?,?,?)
+2023/11/25 08:17:21 users.go:27: table users has no column named created_at
+2023/11/25 08:19:00 users.go:29: table users has no column named created_at
+2023/11/26 05:25:57 users.go:33: table users has no column named created_at
+2023/11/26 06:33:45 server.go:3214: http: panic serving 172.23.0.1:47632: runtime error: invalid memory address or nil pointer dereference
+goroutine 8 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1868 +0xb9
+panic({0x860640?, 0xba6800?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+app/models.UserLists(...)
+	/todo_app/todo_app/app/models/users.go:31
+controllers.top({0x957648?, 0xc0001a0000}, 0xc00012db18?)
+	/todo_app/todo_app/app/controllers/route_main.go:16 +0x9c
+net/http.HandlerFunc.ServeHTTP(0x4477e0?, {0x957648?, 0xc0001a0000?}, 0x71fbda?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc1c120?, {0x957648, 0xc0001a0000}, 0xc000142200)
+	/usr/local/go/src/net/http/server.go:2514 +0x142
+net/http.serverHandler.ServeHTTP({0xc00007f680?}, {0x957648?, 0xc0001a0000?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0001502d0, {0x957de8, 0xc00007f4a0})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb
+2023/11/26 06:33:48 server.go:3214: http: panic serving 172.23.0.1:44512: runtime error: invalid memory address or nil pointer dereference
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1868 +0xb9
+panic({0x860640?, 0xba6800?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+app/models.UserLists(...)
+	/todo_app/todo_app/app/models/users.go:31
+controllers.top({0x957648?, 0xc0001a01c0}, 0xc000063b18?)
+	/todo_app/todo_app/app/controllers/route_main.go:16 +0x9c
+net/http.HandlerFunc.ServeHTTP(0x4477e0?, {0x957648?, 0xc0001a01c0?}, 0x71fbda?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc1c120?, {0x957648, 0xc0001a01c0}, 0xc0001da100)
+	/usr/local/go/src/net/http/server.go:2514 +0x142
+net/http.serverHandler.ServeHTTP({0xc000186540?}, {0x957648?, 0xc0001a01c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0001821b0, {0x957de8, 0xc00007f4a0})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb
+2023/11/26 06:42:21 route_main.go:21: template: users.html:2: unexpected EOF
+2023/11/26 06:43:25 route_main.go:21: template: users.html:5: unexpected {{end}}
+2023/11/26 06:44:20 route_main.go:21: template: users.html:5: unexpected {{end}}
+2023/11/26 06:44:44 route_main.go:21: template: users.html:6: unexpected {{end}}
+2023/11/26 06:45:05 route_main.go:21: template: users.html:6: unexpected {{end}}
+2023/11/26 07:50:19 users.go:31: sql: expected 5 destination arguments in Scan, not 4
+2023/11/26 08:03:18 server.go:3214: http: panic serving 172.23.0.1:48702: name empty
+goroutine 5 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1868 +0xb9
+panic({0x843100?, 0x954b00?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+controllers.userSave({0x958868, 0xc000194000}, 0xc000186000)
+	/todo_app/todo_app/app/controllers/route_main.go:36 +0x3fa
+net/http.HandlerFunc.ServeHTTP(0x10?, {0x958868?, 0xc000194000?}, 0xc0000780ec?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+net/http.(*ServeMux).ServeHTTP(0x413d25?, {0x958868, 0xc000194000}, 0xc000186000)
+	/usr/local/go/src/net/http/server.go:2514 +0x142
+net/http.serverHandler.ServeHTTP({0x9579f0?}, {0x958868?, 0xc000194000?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc000182000, {0x959008, 0xc0000a54a0})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb

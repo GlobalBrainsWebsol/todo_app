@@ -1,0 +1,43 @@
+{
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "golang",
+  "workspaceFolder": "/todo_app/${localWorkspaceFolderBasename}/",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "go.gopath": "/go",
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "go.useLanguageServer": true,
+        "[go]": {
+           "editor.formatOnSave": true,
+           "editor.codeActionsOnSave": {
+               "source.organizeImports": true
+           },
+           // Optional: Disable snippets, as they conflict with completion ranking.
+           "editor.snippetSuggestions": "none"
+         },
+         "[go.mod]": {
+           "editor.formatOnSave": true,
+           "editor.codeActionsOnSave": {
+               "source.organizeImports": true
+           }
+         },
+         "gopls": {
+             // Add parameter placeholders when completing a function.
+             "usePlaceholders": true,
+             // If true, enable additional analyses with staticcheck.
+             // Warning: This will significantly increase memory usage.
+             "staticcheck": true
+         },
+         "go.toolsEnvVars":{
+             "GO111MODULE":"on"
+         }
+       },
+       "extensions": [
+         "golang.go",
+         "ms-vscode.go",
+         "goplus.gop"
+       ]
+    }
+  }
+}

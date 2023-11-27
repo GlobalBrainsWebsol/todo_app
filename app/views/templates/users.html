@@ -1,0 +1,23 @@
+<h1>Users</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>UUID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>CreatedAt</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{range .}}
+    <tr>
+      <td>{{.ID}}</td>
+      <td>{{.UUID}}</td>
+      <td>{{.Name}}</td>
+      <td>{{.Email}}</td>
+      <td>{{.CreatedAt}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
