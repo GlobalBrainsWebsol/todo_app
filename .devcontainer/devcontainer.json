@@ -35,8 +35,7 @@
        },
        "extensions": [
          "golang.go",
-         "ms-vscode.go",
-         "goplus.gop"
+         "ms-vscode.go"
        ]
     }
   }

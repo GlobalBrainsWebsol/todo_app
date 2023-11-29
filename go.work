@@ -1,7 +1,9 @@
 go 1.21.4
-use(
-config
-utils
-app/models
-app/controllers
+
+use (
+	.
+	app/controllers
+	app/models
+	config
+	utils
 )
