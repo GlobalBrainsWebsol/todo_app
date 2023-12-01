@@ -1,7 +1,8 @@
 {
   "dockerComposeFile": "../docker-compose.yml",
   "service": "golang",
-  "workspaceFolder": "/todo_app/${localWorkspaceFolderBasename}/",
+  // "workspaceFolder": "/todo_app/",
+  "workspaceFolder": "/${localWorkspaceFolderBasename}",
   "customizations": {
     "vscode": {
       "settings": {

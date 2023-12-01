@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"app/models"
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -30,7 +29,6 @@ func userSave(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Println(err)
 	}
-	fmt.Println(r.Body)
 	name := r.PostFormValue("name")
 	email := r.PostFormValue("email")
 	pass := r.PostFormValue("password")
